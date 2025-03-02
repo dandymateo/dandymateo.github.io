@@ -1,0 +1,82 @@
+/*
+* rem: lo mas recomendado
+* em: 
+* px: 
+* 1rem = 10px
+
+# Selector de elemento (en base a su etiqueta)
+h1 {
+    text-align: center;
+    font-size: 3.8rem;
+}
+
+# Selector de Clase. Lo mas recomendable
+.servicios {
+    color: blue;
+}
+
+# Selector de ID. No se puede repetir en un mismo documento
+#servicios {
+    color: blue;
+}
+
+# Selector de Atributo. 
+[src = "logo.jpg"] {
+    color: blue;
+}
+
+# Combinación de descendentes
+Selecciona los elementos hijos,
+cuyo padre sea una clase (o ID) en específico
+
+.cliente .nombre {
+    color: blue;
+}
+
+#Todos los hijos. Ejm:
+Aplica a todos los párrafos hijos
+
+.cliente > p {
+    color: blue;
+}
+*/
+*************************************************
+*************************************************
+¿Cómo escribir código css?
+
+Diferentes formas, algunas de ellas:
+
+* BEM: Bloques, Elementos, Modificadores
+* Utility Firts (Módulo)
+
+ Responsive Web Design: Es un enfoque que nuestros diseños deberán
+ adaptarse a las interacciones del usuario y a la resolución que utilizan.
+
+ Se logra con "Media Queries"
+ 
+ *480-Móvil
+ *768-Tablet
+ *1140 o 1400-Laptop
+
+ @media (min-width: 480px){
+
+ }
+
+ @media (min-width: 992px){
+    
+ }
+
+ CSS Box Model:
+ El tamaño de lo que se muestra en pantalla está delimitado por 4 cosas:
+  - Tamaño de contenido
+  - Tamaño de relleno (padding)
+  - Tamaño del Borde
+  - Tamaño del Margen
+
+CSS Grid:
+Permite definir la ubicación y tamaño de los elementos
+de tu sitio web.
+
+Flexbox: El contenido crece automáticamente. Acceso a una sola dimensión (row o column)
+CSS Grid: El contenido se agrupa dentro de un área definida. Acceso a las 2 dimensiones al mismo tiempo.
+

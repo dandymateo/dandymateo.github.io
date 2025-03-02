@@ -1,0 +1,328 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --gris: #757575;
+    --grisclaro: rgb(245,245,245);
+    --primario: blueviolet;
+    --secundario: #0097A3;
+
+}
+/*Generales*/
+* {
+    box-sizing: border-box;
+    /*margin: 0;*/
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {font-size: 3rem;}
+h2 {font-size: 2.5rem;}
+h3 {font-size: 2rem;}
+p {font-size: 1rem;}
+ul {list-style: none;}
+li {font-size: 1rem;}
+
+button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    border: .2rem solid rgba(0, 0, 0, 0.5);
+    box-shadow: .2rem .2rem 1rem rgba(0, 0, 0, 0.5);
+    color: var(--blanco);
+    background-color: var(--primario);
+}
+
+button:hover {
+    background-color: rgb(101, 33, 165);
+}
+
+.container {
+    max-width: 140rem;
+    margin: auto;
+}
+
+.color-acento {
+    color: var(--primario);
+}
+
+header {
+    background-color: var(--grisclaro);
+}
+
+header .logo {
+    margin: 0;
+    padding: 2.5rem 3rem;
+    font-weight: bold;
+    color: var(--primario);
+    font-size: 1.5rem;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 2.5rem;
+}
+
+header a{
+    padding: .5rem 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--oscuro);
+}
+
+header a:hover {
+    color: var(--primario);
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("../img/proya1.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1 {
+    color: var(--blanco);
+}
+
+#somos-proya .container {
+    text-align: center;
+    padding: 10rem 1.2rem;
+}
+
+#programas {
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    text-align: center;
+}
+
+#programas .container {
+    padding: 10rem 0;
+}
+
+#programas button {
+    font-size: 1rem;
+}
+
+#programas h2 {
+    margin-top: 0;
+    font-size: 2.7rem;
+}
+
+#programas p {
+    display: none;
+}
+
+#programas .carta {
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    padding: 5rem;
+    margin: 2rem;
+    border-radius: 1.5rem;
+}
+
+.carta:first-child {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("../img/proya3.jpg");
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("../img/proya4.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("../img/proya5.jpg");
+
+}
+
+#caracteristicas .container {
+    text-align: center;
+    padding: 20rem 1.2rem;
+}
+
+#caracteristicas li {
+    margin: 1.2rem 0rem;
+    font-weight: bold;
+}
+
+#final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+    color: var(--blanco);
+    height: 80vh;
+}
+
+#final h2 {
+    font-size: 9vw;
+}
+
+footer {
+    background-color: var(--grisclaro);
+}
+
+footer p {
+    margin: 0;
+    padding: 1.2rem;
+    color: var(--gris);
+}
+
+footer .container {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+/*Cuando el ancho de la pantalla supere los 720 px
+aplique los siguientes estilos
+*/
+@media (min-width: 720px) {
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 2rem;
+    }
+
+    header h1 {
+        font-size: 0.4rem;
+    }
+
+    #somos-proya .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #somos-proya .somos {
+        width: 50%;
+        max-width: 60rem;
+        text-align: initial;
+        padding-left: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    #somos-proya .img-container{
+        background-image: url("../img/proya2.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 40rem;
+        width: 40rem;
+    }
+
+    #somos-proya h2{
+        margin-top: 0;
+    }
+
+    #programas .programas-ya {
+        display: flex;
+        justify-content: center;
+    }
+
+    #programas p {
+        display: block;
+        margin-bottom: 3rem;
+    }
+
+    #programas h3 {
+        margin-top: 0;
+    }
+
+    #programas .carta {
+        padding: 1.5rem;
+        background-size: 100% 15rem;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: var(--gris);
+        box-shadow: .2rem .2rem 1rem rgba(0, 0, 0, 0.5);
+    }
+
+    #caracteristicas {
+        background-image: url(../img/proya6.jpg);
+        background-repeat: no-repeat;
+        background-size: 50rem;
+        background-position: calc(100vw - 50rem) 10rem;
+    }
+
+    #caracteristicas .container {
+        text-align: initial;
+    }
+
+    #caracteristicas ul{
+        margin-left: 10rem;
+    }
+
+    #final h2{
+        font-size: 5em;
+    }
+
+    #final button{
+        font-size: 2em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 120rem) {
+    #caracteristicas {
+        background-position-x: calc(100vw - 80rem);
+    }
+}
